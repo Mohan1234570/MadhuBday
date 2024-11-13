@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Bodoni Moda', serif;
+}
+body{
+    height: vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(bday.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.M{
+    text-align: center;
+    
+    text-decoration-line: none;
+    color: #ffffff;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    font-size: 40px;
+    background-color: rgb(62, 152, 242);
+    margin-top: auto;
+}
+.navbar a:hover{
+   background-color: #ddd;
+   color: #ddd;
+}
+.topnav a.active{
+    background-color: #0000FF;
+    color: #ddd;
+}
+
+.container{
+    perspective: 1000px;
+}
+.card{
+    width: 280px;
+    height: 360px;
+    position: absolute;
+    top: 100px;
+    left: 230px;
+    transition: 2s;
+    transform-style: preserve-3d;
+}
+
+.logo{
+    background-color: #fff;
+}
+
+#emoji{
+    font-size: large;
+    &#128158;
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+.block{
+    position: absolute;
+    top:200px;
+    right: 600px;
+    perspective: 800px;
+}
+
+.outside,.inside{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1.5rem;
+}
+.outside{
+    background-color: blanchedalmond;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
+    position: absolute;
+    backface-visibility: hidden;
+}
+.outside h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: salmon;
+    margin-bottom: 30px;
+}
+
+.inside{
+    background-color: rgb(255, 244, 79);
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
+    transform: rotateY(180deg);
+}
+.inside h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.frames{
+    width: 400px;
+    height: 150px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 0.8rem;
+
+    transform: rotateY(-230deg) rotateX(20deg);
+    position: absolute;
+}
+.frames img{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.frames p{
+   font-size: 20px;
+   font-weight: bold;
+   transform: rotateY(180deg);
+}
+.frames:nth-child(1)
+{
+    top:-110px;
+    z-index: -1;
+    background-color: coral;
+}
+.frames:nth-child(2){
+    background-color: goldenrod;
+}
+.frames:nth-child(3)
+{
+    top:100px;
+    background-color: burlywood;
+}
+
+.wrapper{
+    position: relative;
+    width: 320px;
+    margin: 150px auto;
+    perspective: 1000px;
+    margin-bottom: 500px;    
+}
+
+.img-area{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(-360deg) translateZ(-300px);
+    animation: animate 25s steps(1000,end) infinite;
+
+}
+
+#img{
+    box-shadow: inset;
+    top: 100%;
+}
+.video{
+    right: auto;
+    bottom: 10%;
+    min-width: 40%;
+    min-height: 30%;
+    margin-top: 21%;
+}
+
+.single-img{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    top: 10px;
+    left: 10px;
+
+}
+.single-img img{
+    width: 300px;
+    height: 200px;
+    border: 5px solid #fff;
+}
+.single-img.img-one{
+    transform: rotateY(0deg) translateZ(300px);
+}
+.single-img.img-two{
+    transform: rotateY(60deg) translateZ(300px);
+}
+.single-img.img-three{
+    transform: rotateY(120deg) translateZ(300px);
+}
+.single-img.img-four{
+    transform: rotateY(180deg) translateZ(300px);
+}
+.single-img.img-five{
+    transform: rotateY(240deg) translateZ(300px);
+}
+li{
+    float: left;
+    
+}
+#li1{
+    float: right;
+    color: #c40f0f;
+}
+.h{
+    text-align: center;
+    background-color: #fff;
+    height: 90%;
+}
+img{
+    filter: grayscale(90%);
+    transition: 1s;
+    filter:grayscale()
+}
+img:hover{
+    transition: 1s;
+    filter: grayscale(0);
+    color: #fff;
+}
+@keyframes animate{
+from{
+    transform: rotateY(-360deg);
+}
+to{
+    transform: rotateY(0deg);
+}
+}
+
+.container3{
+    background-color: rgb(243, 181, 181);
+    text-align: center;
+    background-image: url(R.jpeg);
+    height: 40%;
+    
+}
+footer{
+    text-align: center;
+    padding: 6px;
+    background-color: rgb(95, 108, 210);
+    color: #fff;
+    width: 100%;
+    height: 5%;
+}
